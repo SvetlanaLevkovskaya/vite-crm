@@ -10,5 +10,11 @@
   "message": "Сообщение",
   "topDesigners": "Топ дизайнеров",
   "medianTime": "Медианное время",
-  "completedTasks": "Количество выполненных задач"
+  "completedTasks": "Количество выполненных задач",
+  "oneHour": "час",
+  "fewHours": "часа",
+  "manyHours": "часов",
+  "oneTask": "зачада",
+  "fewTasks": "задачи",
+  "manyTasks": "задач"
 }

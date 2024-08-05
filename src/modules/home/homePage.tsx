@@ -7,7 +7,7 @@ import { TopDesigners } from '../../components/topDesigners/topDesigners.tsx'
 
 export const HomePage: FC = () => {
   return (
-    <Container style={{ minHeight: 'calc(100vh - 82px)', marginTop: '12px' }}>
+    <Container sx={{ minHeight: 'calc(100vh - 82px)', my: 4 }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Comments />

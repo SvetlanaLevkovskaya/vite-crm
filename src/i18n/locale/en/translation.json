@@ -10,5 +10,11 @@
   "message": "Message",
   "topDesigners": "Top Designers",
   "medianTime": "Median Time",
-  "completedTasks": "Completed Tasks"
+  "completedTasks": "Completed Tasks",
+  "oneHour": "hour",
+  "fewHours": "hours",
+  "manyHours": "hours",
+  "oneTask": "task",
+  "fewTasks": "tasks",
+  "manyTasks": "tasks"
 }

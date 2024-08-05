@@ -22,6 +22,7 @@ const App: FC = () => {
         primary: theme === 'light' ? '#000' : '#fff',
       },
     },
+    spacing: 4,
   })
   return (
     <ThemeProvider theme={muiTheme}>
