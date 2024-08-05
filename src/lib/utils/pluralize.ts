@@ -8,7 +8,6 @@ const pluralize = (
   locale: string
 ): string => {
   if (locale === 'ru') {
-    // Русские правила склонения
     const lastDigit = count % 10
     const lastTwoDigits = count % 100
     if (lastDigit === 1 && lastTwoDigits !== 11) {
@@ -20,7 +19,6 @@ const pluralize = (
     }
   }
 
-  // Применение стандартных правил для других языков (например, английского)
   return `${count} ${count === 1 ? one : many}`
 }
 
