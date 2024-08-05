@@ -1,5 +1,8 @@
 import axios from 'axios'
 
+import { Comment } from '../../types/comments.ts'
+import { Designer } from '../../types/designers.ts'
+
 export const handleApiError = (error: unknown): string => {
   if (axios.isAxiosError(error)) {
     if (error.response) {
@@ -20,14 +23,7 @@ export const handleApiError = (error: unknown): string => {
 }
 
 const instanceAxios = axios.create({
-  baseURL: '/api',
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded; charset=utf8',
-  },
-  withCredentials: true,
-  paramsSerializer: {
-    indexes: null,
-  },
+  baseURL: 'https://sandbox.creos.me/api/v1',
 })
 
 instanceAxios.interceptors.response.use(
@@ -38,4 +34,29 @@ instanceAxios.interceptors.response.use(
   }
 )
 
-export const apiClientService = {}
+export const fetchComments = async (): Promise<Comment[]> => {
+  try {
+    const response = await instanceAxios.get('/comment/')
+    return response.data
+  } catch (error) {
+    throw new Error(handleApiError(error))
+  }
+}
+
+export const fetchDesigners = async (): Promise<Designer[]> => {
+  try {
+    const response = await instanceAxios.get<{ results: Designer[] }>('/designer/')
+    return response.data.results
+  } catch (error) {
+    throw new Error(handleApiError(error))
+  }
+}
+
+export const fetchIssues = async () => {
+  try {
+    const response = await instanceAxios.get('/issue/')
+    return response.data
+  } catch (error) {
+    throw new Error(handleApiError(error))
+  }
+}

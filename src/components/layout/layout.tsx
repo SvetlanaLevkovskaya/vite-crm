@@ -10,7 +10,7 @@ export const Layout: FC = () => {
     <div className="flex flex-col min-h-screen">
       <AppBar />
       <main className="flex-1">
-        <Container maxWidth="xl" sx={{ marginTop: '16px' }}>
+        <Container maxWidth="xl">
           <Outlet />
         </Container>
       </main>

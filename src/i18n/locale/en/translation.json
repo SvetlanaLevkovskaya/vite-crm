@@ -2,5 +2,13 @@
   "CRM System": "CRM System",
   "Dark Mode": "Dark Mode",
   "Light Mode": "Light Mode",
-  "Week Number": "Week Number"
+  "Week Number": "Week Number",
+  "latestComments": "Latest Comments",
+  "name": "Name",
+  "relativeTime": "Relative Time",
+  "task": "Task",
+  "message": "Message",
+  "topDesigners": "Top Designers",
+  "medianTime": "Median Time",
+  "completedTasks": "Completed Tasks"
 }

@@ -2,5 +2,13 @@
   "CRM System": "CRM Система",
   "Dark Mode": "Темный режим",
   "Light Mode": "Светлый режим",
-  "Week Number": "Номер недели"
+  "Week Number": "Номер недели",
+  "latestComments": "Последние комментарии",
+  "name": "Имя",
+  "relativeTime": "Относительное время",
+  "task": "Задача",
+  "message": "Сообщение",
+  "topDesigners": "Топ дизайнеров",
+  "medianTime": "Медианное время",
+  "completedTasks": "Количество выполненных задач"
 }

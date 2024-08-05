@@ -24,7 +24,7 @@ i18next
     resources,
     lng: 'ru',
     fallbackLng: 'ru',
-    ns: ['translation'],
+    ns: 'translation',
     defaultNS: 'translation',
     interpolation: {
       escapeValue: false,
