@@ -16,5 +16,9 @@
   "manyHours": "часов",
   "oneTask": "зачада",
   "fewTasks": "задачи",
-  "manyTasks": "задач"
+  "manyTasks": "задач",
+  "tasks": "Задачи",
+  "designers": "Дизайнеры",
+  "closedTasks": "Закрытые задачи",
+  "allTasksStatusPie": "Процентное соотношение статусов задач"
 }

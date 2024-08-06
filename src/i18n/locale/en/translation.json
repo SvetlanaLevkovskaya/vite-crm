@@ -16,5 +16,9 @@
   "manyHours": "hours",
   "oneTask": "task",
   "fewTasks": "tasks",
-  "manyTasks": "tasks"
+  "manyTasks": "tasks",
+  "tasks": "Tasks",
+  "designers": "Designers",
+  "closedTasks": "Closed Tasks",
+  "allTasksStatusPie": "Percentage of Tasks Statuses"
 }

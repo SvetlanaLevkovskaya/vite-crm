@@ -1,6 +1,7 @@
-import { FC } from 'react'
+import { FC, SyntheticEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import {
   Box,
@@ -9,6 +10,8 @@ import {
   AppBar as MuiAppBar,
   Select,
   SelectChangeEvent,
+  Tab,
+  Tabs,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -16,12 +19,20 @@ import {
 } from '@mui/material'
 import i18next from 'i18next'
 
+import { AppRoutes } from '../../lib/configs/routes.ts'
 import { getWorkingWeekNumber } from '../../lib/utils/weekNumber'
 import { RootState } from '../../store'
 import { themeActions, themeSelectors } from '../../store/theme'
 
+interface LinkItem {
+  to: string
+  label: string
+}
+
 export const AppBar: FC = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const location = useLocation()
   const theme = useSelector((state: RootState) => themeSelectors.getTheme(state))
   const { t } = useTranslation()
 
@@ -38,6 +49,20 @@ export const AppBar: FC = () => {
     i18next.changeLanguage(event.target.value)
   }
 
+  const links: LinkItem[] = [
+    { to: AppRoutes.tasks, label: t('tasks') },
+    { to: AppRoutes.designer, label: t('designers') },
+  ]
+
+  const handleTabChange = (event: SyntheticEvent<Element, Event>, newValue: string) => {
+    console.log(event)
+    navigate(newValue)
+  }
+
+  const handleTitleClick = () => {
+    navigate(AppRoutes.home)
+  }
+
   return (
     <MuiAppBar position="static">
       <Toolbar
@@ -50,10 +75,34 @@ export const AppBar: FC = () => {
       >
         <Typography
           variant="h6"
-          style={{ flexGrow: 1, minWidth: '150px', textAlign: isMobile ? 'center' : 'left' }}
+          style={{
+            flexGrow: 1,
+            minWidth: '150px',
+            textAlign: isMobile ? 'center' : 'left',
+            cursor: 'pointer',
+          }}
+          onClick={handleTitleClick}
         >
           {t('CRM System')}
         </Typography>
+
+        <Tabs
+          value={location.pathname}
+          onChange={handleTabChange}
+          textColor="inherit"
+          indicatorColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          sx={{
+            '& .MuiTab-root': {
+              maxHeight: 65.5,
+            },
+          }}
+        >
+          {links.map((link, index) => (
+            <Tab key={index} label={<Box>{link.label}</Box>} value={link.to} />
+          ))}
+        </Tabs>
 
         <Box
           display="flex"
@@ -70,6 +119,7 @@ export const AppBar: FC = () => {
           >
             {t('Week Number')}: {workingWeekNumber}
           </Typography>
+
           <Button
             color="inherit"
             onClick={handleThemeToggle}
