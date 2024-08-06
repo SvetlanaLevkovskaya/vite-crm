@@ -17,7 +17,7 @@ export const appRoutersConfig = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: AppRoutes.tasks,
+        path: AppRoutes.issue,
         element: <TasksPage />,
       },
       {

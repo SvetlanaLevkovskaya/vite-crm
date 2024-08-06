@@ -20,5 +20,11 @@
   "tasks": "Задачи",
   "designers": "Дизайнеры",
   "closedTasks": "Закрытые задачи",
-  "allTasksStatusPie": "Процентное соотношение статусов задач"
+  "allTasksStatusPie": "Процентное соотношение статусов задач",
+  "selectNumberOfWeeks": "Выберите количество недель:",
+  "oneWeek": "1 Неделя",
+  "twoWeeks": "2 Недели",
+  "fourWeeks": "4 Недели",
+  "eightWeeks": "8 Недель",
+  "twelveWeeks": "12 Недель"
 }

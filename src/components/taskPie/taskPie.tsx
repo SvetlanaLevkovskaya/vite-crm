@@ -71,7 +71,7 @@ export const TaskPie: React.FC = () => {
   }
 
   return (
-    <div className="w-full md:w-[85%] lg:w-[50%] h-[400px]">
+    <div className="w-full md:w-[85%] lg:w-[50%] h-[400px]  flex flex-col gap-14">
       <h2>{t('allTasksStatusPie')}</h2>
 
       <Pie data={data} options={options} />

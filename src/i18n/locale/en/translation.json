@@ -20,5 +20,11 @@
   "tasks": "Tasks",
   "designers": "Designers",
   "closedTasks": "Closed Tasks",
-  "allTasksStatusPie": "Percentage of Tasks Statuses"
+  "allTasksStatusPie": "Percentage of Tasks Statuses",
+  "selectNumberOfWeeks": "Select number of weeks:",
+  "oneWeek": "1 Week",
+  "twoWeeks": "2 Weeks",
+  "fourWeeks": "4 Weeks",
+  "eightWeeks": "8 Weeks",
+  "twelveWeeks": "12 Weeks"
 }

@@ -1,5 +1,11 @@
 export const AppRoutes = {
   home: '/',
-  tasks: '/tasks',
+  issue: '/issue',
   designer: '/designer',
+}
+
+export const ApiRoutes = {
+  comment: '/comment/',
+  issue: '/issue/',
+  designer: '/designer/',
 }

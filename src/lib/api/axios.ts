@@ -2,6 +2,7 @@ import axios from 'axios'
 
 import { Comment } from '../../types/comments.ts'
 import { Designer } from '../../types/designers.ts'
+import { ApiRoutes } from '../configs/routes.ts'
 
 export const handleApiError = (error: unknown): string => {
   if (axios.isAxiosError(error)) {
@@ -36,7 +37,7 @@ instanceAxios.interceptors.response.use(
 
 export const fetchComments = async (): Promise<Comment[]> => {
   try {
-    const response = await instanceAxios.get('/comment/')
+    const response = await instanceAxios.get(ApiRoutes.comment)
     return response.data
   } catch (error) {
     throw new Error(handleApiError(error))
@@ -45,7 +46,7 @@ export const fetchComments = async (): Promise<Comment[]> => {
 
 export const fetchDesigners = async (): Promise<Designer[]> => {
   try {
-    const response = await instanceAxios.get<{ results: Designer[] }>('/designer/')
+    const response = await instanceAxios.get<{ results: Designer[] }>(ApiRoutes.designer)
     return response.data.results
   } catch (error) {
     throw new Error(handleApiError(error))
@@ -54,7 +55,7 @@ export const fetchDesigners = async (): Promise<Designer[]> => {
 
 export const fetchIssues = async () => {
   try {
-    const response = await instanceAxios.get('/issue/')
+    const response = await instanceAxios.get(ApiRoutes.issue)
     return response.data
   } catch (error) {
     throw new Error(handleApiError(error))

@@ -50,7 +50,7 @@ export const AppBar: FC = () => {
   }
 
   const links: LinkItem[] = [
-    { to: AppRoutes.tasks, label: t('tasks') },
+    { to: AppRoutes.issue, label: t('tasks') },
     { to: AppRoutes.designer, label: t('designers') },
   ]
 
