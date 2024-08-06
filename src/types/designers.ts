@@ -11,4 +11,7 @@ export interface Designer {
   issues: Issue[]
   medianTime?: number
   completedTasks?: number
+  email: string
+  closedTasksCount: number
+  inProgressTasksCount: number
 }

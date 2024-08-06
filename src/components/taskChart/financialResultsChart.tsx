@@ -42,7 +42,7 @@ export const FinancialResultsChart = () => {
         borderWidth: 1,
       },
       {
-        label: 'Expense',
+        label: 'Expenses',
         data: Object.values(weekData).map((d) => d.expense),
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
